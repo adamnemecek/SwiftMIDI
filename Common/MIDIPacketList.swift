@@ -14,6 +14,7 @@ struct PacketList : Sequence {
         self.packetList = packetList
     }
     typealias Element = UnsafePointer<MIDIPacket>
+    
     func makeIterator() -> AnyIterator<UnsafePointer<MIDIPacket>> {
         
         // access pointer to const packet form const packetList pointer
@@ -40,8 +41,8 @@ extension UnsafePointer where Pointee == MIDIPacketList {
 }
 
 extension UnsafePointer where Pointee == MIDIPacket {
+    
     var data:UnsafeBufferPointer<UInt8> {
-        
         // access pointer to const UInt8 form const packet pointer
         // this is done with a c-function, MIDIPacketGetData, not possible in swift
         return UnsafeBufferPointer<UInt8>(start :MIDIPacketGetData(self), count: Int(pointee.length))
@@ -50,8 +51,10 @@ extension UnsafePointer where Pointee == MIDIPacket {
     
 
 struct MutablePacketList {
+    
     // The maximum size of a packet list is 65536 bytes.
     static let maxPackageListSize = 65536
+    
     private let size:Int
     private var packetList:HeadedBytes<MIDIPacketList>
     private var currentPacket:UnsafeMutablePointer<MIDIPacket>?
@@ -76,8 +79,8 @@ struct MutablePacketList {
     }
     
     mutating func initialize(){
+        
         currentPacket = packetList.withUnsafeMutablePointer {
-            
             // use a c-function here to extend CoreMIDI API
             // the conventional function MIDIPacketListInit does not return an optional
             return PacketListInit($0)
@@ -85,9 +88,9 @@ struct MutablePacketList {
     }
     
     mutating func addPacket(data:Data, timeStamp:MIDITimeStamp) -> Bool {
+        
         currentPacket = packetList.withUnsafeMutablePointer { packetList in
             return data.withUnsafeBytes {
-                
                 // use a c-function here to extend CoreMIDI API
                 // it returns and takes an optional packet pointer
                 // the original function PacketListAdd cannot not be used in this case

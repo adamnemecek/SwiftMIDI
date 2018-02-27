@@ -10,7 +10,6 @@ import AudioToolbox
 
 extension UnsafePointer where Pointee == MIDIRawData {
     var data:UnsafeBufferPointer<UInt8> {
-        
         // access pointer to const UInt8 form const packet pointer
         // this is done with a c-function, MIDIRawDataGetData, not possible in swift
         return UnsafeBufferPointer<UInt8>(start:MIDIRawDataGetData(self), count:Int(self.pointee.length))
