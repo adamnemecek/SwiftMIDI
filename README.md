@@ -21,7 +21,7 @@ These simple extensions make it possible to do the following three things in swi
   
   see [MIDIRawData/main.swift](MIDIRawData/main.swift)
   
-  see [MusicUserEventData/main.swift](MusicUserEventData/main.swift)
+  see [MusicEventUserData/main.swift](MusicEventUserData/main.swift)
 
 ### MIDIPacketGetNextPacket, MIDIPacketListGetPacket
 
