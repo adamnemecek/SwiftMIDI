@@ -70,7 +70,7 @@ inline const UInt8 * _Nonnull MIDIMetaEventGetData(const MIDIMetaEvent* _Nonnull
 ```c
 inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
 ```
-    [RawData.swift](Common/RawData.swift) for a use of this function
+[RawData.swift](Common/RawData.swift) for a use of this function
 
 - access data fields as`UnsafePointer<UInt8>` from `UnsafePointer<MIDIPacket>`, `UnsafePointer<MusicEventUserData>`, `UnsafePointer<MIDIMetaEvent>`, `UnsafePointer<MIDIRawData>`
 
