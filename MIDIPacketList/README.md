@@ -41,9 +41,11 @@ struct PacketList : Sequence {
         }
     }
 }
-
+```
+```swift
 extension UnsafePointer where Pointee == MIDIPacketList {
     var packets:PacketList {
         return PacketList(self)
     }
 }
+```
