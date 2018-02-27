@@ -13,7 +13,7 @@ These simple extensions make it possible to do the following three things in swi
 
   see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
-- read and write open ended structs like MIDIRawData, MIDIMetaEvent, MusicEventUserData
+- read open ended structs like MIDIRawData, MIDIMetaEvent, MusicEventUserData when pointed to by UnsafePointer<...>
 
   see [OpenEndedStructs/main.swift](OpenEndedStructs/main.swift)
   
