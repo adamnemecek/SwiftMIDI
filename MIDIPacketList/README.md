@@ -1,4 +1,7 @@
-# 1. Iterate over packets in packet list.
+
+# Simple commandline tool demonstrating use of MIDIPacketLists in swift.
+
+## 1. Iterate over packets in packet list.
 
 MIDI data send to a destination endpoint is delivered as `UnsafePointer<MIDIPacketList>`.
 With the extensions listed below, the packets can be retreaved like this:
@@ -66,7 +69,7 @@ extension UnsafePointer where Pointee == MIDIPacket {
     }
 }
 ```
-# 2. Allocate packet list and add packets.
+## 2. Allocate packet list and add packets.
 
 ```swift
 // create a packetlist
