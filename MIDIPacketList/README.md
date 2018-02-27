@@ -69,6 +69,23 @@ extension UnsafePointer where Pointee == MIDIPacket {
 # 2. Allocate packet list and add packets.
 
 ```swift
+// cerate a packetlist
+var packetList = MutablePacketList(size: 1024)
+```
+```swift
+
+// append packet with some data to a packetList
+let data:Data = ...
+let timeStamp = ...
+var success = packetList.addPacket(data: data, timeStamp: timeStamp)
+    
+guard success else {
+    // packet list is full...
+    break
+}
+```    
+
+```swift
 struct MutablePacketList {
     
     // The maximum size of a packet list is 65536 bytes.
