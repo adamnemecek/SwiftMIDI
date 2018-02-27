@@ -37,7 +37,7 @@ inline const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _N
 These functions are needed when iterating over the packets in a packetList without copying the packet.
 `MIDIPacketNext` from the CoreMIDI API works with pointer-offsets. The next packet must follow the current packet in the same memory block.
 
-[MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
+See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions.
 
 ### 2. PacketListInit, PacketListAdd
 
@@ -51,26 +51,26 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 ```
 - dynamically build up packet lists in swift
 
-[MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
+See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions.
 
 ### 3. get pointers to data fields from pointers to const structs
 
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
 ```
-[MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function
+See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function.
 ```c
 inline const UInt8 * _Nonnull MusicEventUserDataGetData(const MusicEventUserData* _Nonnull  event);
 ```
-[UserEventData.swift](Common/UserEventData.swift) for a use of this function
+See [UserEventData.swift](Common/UserEventData.swift) for a use of this function.
 ```c
 inline const UInt8 * _Nonnull MIDIMetaEventGetData(const MIDIMetaEvent* _Nonnull  event);
 ```
-[MetaEventData.swift](Common/MetaEventData.swift) for a use of this function
+See [MetaEventData.swift](Common/MetaEventData.swift) for a use of this function.
 ```c
 inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
 ```
-[RawData.swift](Common/RawData.swift) for a use of this function
+See [RawData.swift](Common/RawData.swift) for a use of this function.
 
 - access data fields as`UnsafePointer<UInt8>` from `UnsafePointer<MIDIPacket>`, `UnsafePointer<MusicEventUserData>`, `UnsafePointer<MIDIMetaEvent>`, `UnsafePointer<MIDIRawData>`
 
