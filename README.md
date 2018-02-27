@@ -58,15 +58,15 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
 ```
-    [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function
+[MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function
 ```c
 inline const UInt8 * _Nonnull MusicEventUserDataGetData(const MusicEventUserData* _Nonnull  event);
 ```
-    [UserEventData.swift](Common/UserEventData.swift) for a use of this function
+[UserEventData.swift](Common/UserEventData.swift) for a use of this function
 ```c
 inline const UInt8 * _Nonnull MIDIMetaEventGetData(const MIDIMetaEvent* _Nonnull  event);
 ```
-    [MetaEventData.swift](Common/MetaEventData.swift) for a use of this function
+[MetaEventData.swift](Common/MetaEventData.swift) for a use of this function
 ```c
 inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
 ```
