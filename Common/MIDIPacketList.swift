@@ -52,7 +52,7 @@ extension UnsafePointer where Pointee == MIDIPacket {
 
 struct MutablePacketList {
     
-    // The maximum size of a packet list is 65536 bytes.
+    // The maximum size of a packet list is 65536 bytes (UInt16.max + 1).
     static let maxPackageListSize = 65536
     
     private let size:Int
