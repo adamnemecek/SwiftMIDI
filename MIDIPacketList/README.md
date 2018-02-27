@@ -1,15 +1,18 @@
 # Iterate over packets in packet list.
 
+MIDI data send to a destination endpoint is delivered as `UnsafePoniter<MIDIPacketList>`.
+With the extensions listed below, the packets can be retreaved like this:
+
 ```swift
 
-let packtList:[UnsafePoniter<MIDIPacketList>] = ...
+let packtList:UnsafePoniter<MIDIPacketList> = ...
     
 for packet in packetList.packets {
 
       // access MIDIPacket fileds like this:
       let length = packet-pointee.length
       let timestamp = packet.pointee.timestamp
-      let data:UnsafeBuffrPointer<UInt8> = packet.data
+      let data:UnsafeBufferPointer<UInt8> = packet.data
       
 }
 
