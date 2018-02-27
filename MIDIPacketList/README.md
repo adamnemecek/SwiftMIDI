@@ -8,7 +8,7 @@ With the extensions listed below, the packets can be retreaved like this:
 
 ```swift
 
-let packtList:UnsafePoniter<MIDIPacketList> = ...
+let packtList:UnsafePointer<MIDIPacketList> = ...
     
 for packet in packetList.packets {
 
