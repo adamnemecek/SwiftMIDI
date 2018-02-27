@@ -1,4 +1,4 @@
-# Iterate over packets in packet list.
+# 1. Iterate over packets in packet list.
 
 MIDI data send to a destination endpoint is delivered as `UnsafePoniter<MIDIPacketList>`.
 With the extensions listed below, the packets can be retreaved like this:
@@ -26,7 +26,7 @@ extension UnsafePointer where Pointee == MIDIPacketList {
     }
 }
 ```
-PacketList struct is a sequence of `UnsafePointer<MIDIPacket>`:
+`PacketList` struct is a sequence of `UnsafePointer<MIDIPacket>`:
     
 ```swift
 struct PacketList : Sequence {
