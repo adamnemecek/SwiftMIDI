@@ -55,22 +55,25 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions.
 
 ### 3. get pointers to data fields from pointers to const structs
-
+MIDIPacketGetData returns pointer to data field of MIDIPacket:
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
 ```
 See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function.
 
+MusicEventUserDataGetData returns pointer to data field of MusicEventUserDataGetData:
 ```c
 inline const UInt8 * _Nonnull MusicEventUserDataGetData(const MusicEventUserData* _Nonnull  event);
 ```
 See [UserEventData.swift](Common/UserEventData.swift) for a use of this function.
 
+MIDIMetaEventGetData returns pointer to data field of MIDIMetaEventGetData:
 ```c
 inline const UInt8 * _Nonnull MIDIMetaEventGetData(const MIDIMetaEvent* _Nonnull  event);
 ```
 See [MetaEventData.swift](Common/MetaEventData.swift) for a use of this function.
 
+MIDIRawDataGetData returns pointer to data field of MIDIRawDataGetData:
 ```c
 inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
 ```
