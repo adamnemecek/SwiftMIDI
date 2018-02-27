@@ -7,11 +7,11 @@ These simple extensions make it possible to do the following three things in swi
 
 ### 1. iterate over packets in a packetlist (packets may be longer than 256 bytes)
 
-See [MIDIPacketList/main.swift](MIDIPacketList/README.md#1).
+See [MIDIPacketList/README.md](MIDIPacketList/README.md#1).
   
 ### 2. add packets to packetLists
 
-See [MIDIPacketList/main.swift](MIDIPacketList/main.swift).
+See [MIDIPacketList/README.md](MIDIPacketList/README.md#2).
   
 ### 3. read open ended structs like `MIDIRawData`, `MIDIMetaEvent`, `MusicEventUserData` when pointed to by `UnsafePointer<...>`
 
