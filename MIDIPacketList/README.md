@@ -69,11 +69,10 @@ extension UnsafePointer where Pointee == MIDIPacket {
 # 2. Allocate packet list and add packets.
 
 ```swift
-// cerate a packetlist
+// create a packetlist
 var packetList = MutablePacketList(size: 1024)
 ```
 ```swift
-
 // append packet with some data to a packetList
 let data:Data = ...
 let timeStamp = ...
@@ -85,14 +84,12 @@ guard success else {
 }
 ```    
 ```swift
-// cerate a packetlist
-var packetList = MutablePacketList(size: 1024)
-
-```
-// use packet list like this
+// use packet list like this:
 packetList.withMIDIPacketList { packetList:UnsafePointer<MIDIPacketList> in
     // send packetList...
 }
+```
+Here is the code for the `MutablePacketList`
 ```swift
 struct MutablePacketList {
     
