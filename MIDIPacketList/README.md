@@ -58,7 +58,13 @@ struct PacketList : Sequence {
     }
 }
 ```
-
+MIDIPacketGetNextPacket is defined like this:
+```c
+// the only diference to MIDIPacketNext is the const specifier of the result
+const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _Nonnull packet) {
+    return MIDIPacketNext(packet);
+}
+```
 ```swift
 extension UnsafePointer where Pointee == MIDIPacket {
     
