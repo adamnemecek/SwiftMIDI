@@ -68,4 +68,61 @@ extension UnsafePointer where Pointee == MIDIPacket {
 ```
 # 2. Allocate packet list and add packets.
 
-
+```swift
+struct MutablePacketList {
+    
+    // The maximum size of a packet list is 65536 bytes.
+    static let maxPackageListSize = 65536
+    
+    private let size:Int
+    private var packetList:HeadedBytes<MIDIPacketList>
+    private var currentPacket:UnsafeMutablePointer<MIDIPacket>?
+    
+    init(size:Int = MemoryLayout<MIDIPacketList>.size) {
+        self.size = MutablePacketList.calcSize(size)
+        packetList = HeadedBytes(size:self.size)
+        initialize()
+    }
+    
+    private static func calcSize(_ size:Int) -> Int {
+        var packetSize = MemoryLayout<MIDIPacketList>.size
+        
+        if size > packetSize {
+            packetSize = size
+        }
+        
+        if packetSize > MutablePacketList.maxPackageListSize {
+            packetSize = Int(MutablePacketList.maxPackageListSize)
+        }
+        return packetSize
+    }
+    
+    mutating func initialize(){
+        
+        currentPacket = packetList.withUnsafeMutablePointer {
+            // use a c-function here to extend CoreMIDI API
+            // the conventional function MIDIPacketListInit does not return an optional
+            return PacketListInit($0)
+        }
+    }
+    
+    mutating func addPacket(data:Data, timeStamp:MIDITimeStamp) -> Bool {
+        
+        currentPacket = packetList.withUnsafeMutablePointer { packetList in
+            return data.withUnsafeBytes {
+                // use a c-function here to extend CoreMIDI API
+                // it returns and takes an optional packet pointer
+                // the original function PacketListAdd cannot not be used in this case
+                return PacketListAdd(packetList, size, currentPacket, timeStamp, data.count, $0)
+            }
+        }
+        return currentPacket != nil
+    }
+    
+    func withMIDIPacketList<Result>(_ body:(UnsafePointer<MIDIPacketList>) throws -> Result ) rethrows -> Result {
+        return try packetList.withUnsafePointer {
+            return try body($0)
+        }
+    }
+}
+```
