@@ -84,7 +84,15 @@ guard success else {
     break
 }
 ```    
+```swift
+// cerate a packetlist
+var packetList = MutablePacketList(size: 1024)
 
+```
+// use packet list like this
+packetList.withMIDIPacketList { packetList:UnsafePointer<MIDIPacketList> in
+    // send packetList...
+}
 ```swift
 struct MutablePacketList {
     
