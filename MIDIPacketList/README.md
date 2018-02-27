@@ -12,7 +12,7 @@ let packtList:UnsafePoniter<MIDIPacketList> = ...
     
 for packet in packetList.packets {
 
-      // access MIDIPacket fileds like this:
+      // access MIDIPacket fields like this:
       let length = packet-pointee.length
       let timestamp = packet.pointee.timestamp
       let data:UnsafeBufferPointer<UInt8> = packet.data
