@@ -22,7 +22,7 @@ inline const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _N
 
 These functions are needed when iterating over the packets in a packetList without copying the packet.
 MIDIPacketNext from the CoreMIDI API works with pointer-offsets. The next packet must follow the current packet in the same memory block.
-see MIDIPacketList.swift for a use of these functions
+[see MIDIPacketList.swift for a use of these functions](...Common/MIDIPacketList.swift)
 
 ### PacketListInit, PacketListAdd
 
