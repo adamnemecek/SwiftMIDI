@@ -49,3 +49,13 @@ extension UnsafePointer where Pointee == MIDIPacketList {
     }
 }
 ```
+```swift
+extension UnsafePointer where Pointee == MIDIPacket {
+    
+    var data:UnsafeBufferPointer<UInt8> {
+        // access pointer to const UInt8 form const packet pointer
+        // this is done with a c-function, MIDIPacketGetData, not possible in swift
+        return UnsafeBufferPointer<UInt8>(start :MIDIPacketGetData(self), count: Int(pointee.length))
+    }
+}
+```
