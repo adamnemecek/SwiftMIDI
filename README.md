@@ -7,21 +7,21 @@ These simple extensions make it possible to do the following three things in swi
 
 ### 1. iterate over packets in a packetlist (packets may be longer than 256 bytes)
 
-    [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
+[MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
 ### 2. add packets to packetLists
 
-    [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
+[MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
 ### 3. read open ended structs like `MIDIRawData`, `MIDIMetaEvent`, `MusicEventUserData` when pointed to by `UnsafePointer<...>`
 
-    [OpenEndedStructs/main.swift](OpenEndedStructs/main.swift)
+[OpenEndedStructs/main.swift](OpenEndedStructs/main.swift)
   
-    [MIDIMetaEvent/main.swift](MIDIMetaEvent/main.swift)
+[MIDIMetaEvent/main.swift](MIDIMetaEvent/main.swift)
   
-    [MIDIRawData/main.swift](MIDIRawData/main.swift)
+[MIDIRawData/main.swift](MIDIRawData/main.swift)
   
-    [MusicEventUserData/main.swift](MusicEventUserData/main.swift)
+[MusicEventUserData/main.swift](MusicEventUserData/main.swift)
 
 ### 1. MIDIPacketGetNextPacket, MIDIPacketListGetPacket
 
@@ -37,7 +37,7 @@ inline const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _N
 These functions are needed when iterating over the packets in a packetList without copying the packet.
 `MIDIPacketNext` from the CoreMIDI API works with pointer-offsets. The next packet must follow the current packet in the same memory block.
 
-    [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
+[MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
 
 ### 2. PacketListInit, PacketListAdd
 
@@ -51,7 +51,7 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 ```
 - dynamically build up packet lists in swift
 
-    [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
+[MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
 
 ### 3. get pointers to data fields from pointers to const structs
 
