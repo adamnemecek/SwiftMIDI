@@ -66,3 +66,6 @@ extension UnsafePointer where Pointee == MIDIPacket {
     }
 }
 ```
+# 2. Allocate packet list and add packets.
+
+
