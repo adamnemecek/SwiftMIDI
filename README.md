@@ -59,18 +59,22 @@ See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these funct
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
 ```
 See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function.
+
 ```c
 inline const UInt8 * _Nonnull MusicEventUserDataGetData(const MusicEventUserData* _Nonnull  event);
 ```
 See [UserEventData.swift](Common/UserEventData.swift) for a use of this function.
+
 ```c
 inline const UInt8 * _Nonnull MIDIMetaEventGetData(const MIDIMetaEvent* _Nonnull  event);
 ```
 See [MetaEventData.swift](Common/MetaEventData.swift) for a use of this function.
+
 ```c
 inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
 ```
 See [RawData.swift](Common/RawData.swift) for a use of this function.
+
 
 - access data fields as`UnsafePointer<UInt8>` from `UnsafePointer<MIDIPacket>`, `UnsafePointer<MusicEventUserData>`, `UnsafePointer<MIDIMetaEvent>`, `UnsafePointer<MIDIRawData>`
 
