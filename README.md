@@ -7,21 +7,21 @@ These simple extensions make it possible to do the following three things in swi
 
 ### 1. iterate over packets in a packetlist (packets may be longer than 256 bytes)
 
-  ...see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
+    [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
 ### 2. add packets to packetLists
 
-  ...see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
+    [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
 ### 3. read open ended structs like `MIDIRawData`, `MIDIMetaEvent`, `MusicEventUserData` when pointed to by `UnsafePointer<...>`
 
-  ...see [OpenEndedStructs/main.swift](OpenEndedStructs/main.swift)
+    [OpenEndedStructs/main.swift](OpenEndedStructs/main.swift)
   
-  ...see [MIDIMetaEvent/main.swift](MIDIMetaEvent/main.swift)
+    [MIDIMetaEvent/main.swift](MIDIMetaEvent/main.swift)
   
-  ...see [MIDIRawData/main.swift](MIDIRawData/main.swift)
+    [MIDIRawData/main.swift](MIDIRawData/main.swift)
   
-  ...see [MusicEventUserData/main.swift](MusicEventUserData/main.swift)
+    [MusicEventUserData/main.swift](MusicEventUserData/main.swift)
 
 ### 1. MIDIPacketGetNextPacket, MIDIPacketListGetPacket
 
@@ -37,7 +37,7 @@ inline const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _N
 These functions are needed when iterating over the packets in a packetList without copying the packet.
 `MIDIPacketNext` from the CoreMIDI API works with pointer-offsets. The next packet must follow the current packet in the same memory block.
 
-...see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions]
+    [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
 
 ### 2. PacketListInit, PacketListAdd
 
@@ -51,26 +51,26 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 ```
 - dynamically build up packet lists in swift
 
-...see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
+    [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
 
 ### 3. get pointers to data fields from pointers to const structs
 
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
 ```
-...see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function
+    [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function
 ```c
 inline const UInt8 * _Nonnull MusicEventUserDataGetData(const MusicEventUserData* _Nonnull  event);
 ```
-...see [UserEventData.swift](Common/UserEventData.swift) for a use of this function
+    [UserEventData.swift](Common/UserEventData.swift) for a use of this function
 ```c
 inline const UInt8 * _Nonnull MIDIMetaEventGetData(const MIDIMetaEvent* _Nonnull  event);
 ```
-...see [MetaEventData.swift](Common/MetaEventData.swift) for a use of this function
+    [MetaEventData.swift](Common/MetaEventData.swift) for a use of this function
 ```c
 inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
 ```
-...see [RawData.swift](Common/RawData.swift) for a use of this function
+    [RawData.swift](Common/RawData.swift) for a use of this function
 
 - access data fields as`UnsafePointer<UInt8>` from `UnsafePointer<MIDIPacket>`, `UnsafePointer<MusicEventUserData>`, `UnsafePointer<MIDIMetaEvent>`, `UnsafePointer<MIDIRawData>`
 
