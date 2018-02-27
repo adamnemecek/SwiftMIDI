@@ -41,6 +41,8 @@ extension UnsafePointer where Pointee == MIDIPacketList {
 
 extension UnsafePointer where Pointee == MIDIPacket {
     var data:UnsafeBufferPointer<UInt8> {
+        // access pointer to const UInt8 form const packet pointer
+        // this is done with a c-function, not possible in swift
         return UnsafeBufferPointer<UInt8>(start :MIDIPacketGetData(self), count: Int(pointee.length))
     }
 }
@@ -84,6 +86,10 @@ struct MutablePacketList {
     mutating func addPacket(data:Data, timeStamp:MIDITimeStamp) -> Bool {
         currentPacket = packetList.withUnsafeMutablePointer { packetList in
             return data.withUnsafeBytes {
+                
+                // use a c-function here to extend CoreMIDI API
+                // it returns and takes an optional packet pointer
+                // the original function PacketListAdd cannot not be used in this case
                 return PacketListAdd(packetList, size, currentPacket, timeStamp, data.count, $0)
             }
         }
