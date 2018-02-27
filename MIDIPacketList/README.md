@@ -65,6 +65,9 @@ const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _Nonnull 
     return MIDIPacketNext(packet);
 }
 ```
+
+The data field of MIDIPacket is returned as UnsafeBufferPointer<UInt8>:
+
 ```swift
 extension UnsafePointer where Pointee == MIDIPacket {
     
@@ -75,6 +78,14 @@ extension UnsafePointer where Pointee == MIDIPacket {
     }
 }
 ```
+MIDIPacketGetData is defined like this:
+```c
+// get pointer to const field from a pointer to a const struct, not possible in swift
+const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet) {
+    return packet->data;
+}
+```
+
 ## 2. Allocate packet list and add packets.
 
 ```swift
