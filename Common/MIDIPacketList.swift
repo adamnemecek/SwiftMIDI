@@ -24,6 +24,8 @@ struct PacketList : Sequence {
         
         return AnyIterator {
             defer {
+                // access pointer to const packet form const packet pointer
+                // this is done with a c-function, not possible in swift
                 p = MIDIPacketGetNextPacket(p)
             }
             return i.next().map { _ in p }
