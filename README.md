@@ -9,4 +9,16 @@ These simple extensions make it possible to do the following three things in swi
 - add packets to packetLists
 - read and write open ended structs like MIDIRawData, MIDIMetaEvent, MusicEventUserData
 
+```c
+inline const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _Nonnull packet);
+```
 
+```c
+inline MIDIPacket * _Nullable PacketListInit(MIDIPacketList * _Nonnull packetList);
+```
+```c
+inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList, ByteCount listSize, MIDIPacket *_Nullable currentPacket, MIDITimeStamp timeStamp, ByteCount dataSize, const Byte * _Nonnull data);
+
+```
+
+ 
