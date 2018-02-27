@@ -6,13 +6,21 @@ I wrote some simple c-functions to extend the existing CoreMIDI APi for swift.
 These simple extensions make it possible to do the following three things in swift:
 
 - iterate over packets in a packetlist (packets may be longer than 256 bytes)
+
   see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
+  
 - add packets to packetLists
+
   see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
+  
 - read and write open ended structs like MIDIRawData, MIDIMetaEvent, MusicEventUserData
+
   see [OpenEndedStructs/main.swift](OpenEndedStructs/main.swift)
+  
   see [MIDIMetaEvent/main.swift](MIDIMetaEvent/main.swift)
+  
   see [MIDIRawData/main.swift](MIDIRawData/main.swift)
+  
   see [MusicUserEventData/main.swift](MusicUserEventData/main.swift)
 
 ### MIDIPacketGetNextPacket, MIDIPacketListGetPacket
