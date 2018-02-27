@@ -9,14 +9,20 @@ These simple extensions make it possible to do the following three things in swi
 - add packets to packetLists
 - read and write open ended structs like MIDIRawData, MIDIMetaEvent, MusicEventUserData
 
-### MIDIPacketGetNextPacket
+### MIDIPacketGetNextPacket, MIDIPacketListGetPacket
+
+```c
+inline const MIDIPacket * _Nonnull MIDIPacketListGetPacket(const MIDIPacketList * _Nonnull packetList);
+```
+- get an `UnsafePointer<MIDIPacket>` to the first packet from an `UnsaferPointer<MIDIPacketList>`
 ```c
 inline const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _Nonnull packet);
 ```
 - get an `UnsafePointer<MIDIPacket>` to the next packet from an `UnsaferPointer<MIDIPacket>`
-This is needed when iterating over the packets in a packetList without copying the packet.
+
+These functions are needed when iterating over the packets in a packetList without copying the packet.
 MIDIPacketNext from the CoreMIDI API works with pointer-offsets. The next packet must follow the current packet in the same memory block.
-- see MIDIPacketList.swift for a use of this function
+- see MIDIPacketList.swift for a use of these function
 
 ### PacketListInit, PacketListAdd
 
@@ -28,9 +34,12 @@ inline MIDIPacket * _Nullable PacketListInit(MIDIPacketList * _Nonnull packetLis
 inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList, ByteCount listSize, MIDIPacket *_Nullable currentPacket, MIDITimeStamp timeStamp, ByteCount dataSize, const Byte * _Nonnull data);
 
 ```
-- dynamically build up packet list in swift
+- dynamically build up packet lists in swift
 - see MIDIPacketList.swift for a use of these functions
 
+### MIDIPacketListGetPacket
 
-
+```c
+inline const MIDIPacket * _Nonnull MIDIPacketListGetPacket(const MIDIPacketList * _Nonnull packetList);
+```
  
