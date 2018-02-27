@@ -37,5 +37,14 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 ```
 - dynamically build up packet lists in swift
 
-see MIDIPacketList.swift for a use of these functions
+see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
+
+### MIDIPacketGetData
+
+```c
+inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
+```
+- access data field of MIDIPacket struct as `UnsafePointer<UInt8>` from an `UnsafePointer<MIDIPacket>`
+see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function
+
  
