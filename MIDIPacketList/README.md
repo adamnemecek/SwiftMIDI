@@ -1,5 +1,5 @@
 
-# Simple commandline tool demonstrating use of MIDIPacketLists in swift.
+# Use of MIDIPacketLists in swift.
 
 ## 1. Iterate over packets in packet list.
 
