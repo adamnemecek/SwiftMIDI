@@ -1,6 +1,6 @@
 # 1. Iterate over packets in packet list.
 
-MIDI data send to a destination endpoint is delivered as `UnsafePoniter<MIDIPacketList>`.
+MIDI data send to a destination endpoint is delivered as `UnsafePointer<MIDIPacketList>`.
 With the extensions listed below, the packets can be retreaved like this:
 
 ```swift
