@@ -5,15 +5,15 @@ Some simple c-functions to extend the existing CoreMIDI APi for swift.
 
 These simple extensions make it possible to do the following three things in swift:
 
-1. iterate over packets in a packetlist (packets may be longer than 256 bytes)
+### 1. iterate over packets in a packetlist (packets may be longer than 256 bytes)
 
   see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
-2. add packets to packetLists
+### 2. add packets to packetLists
 
   see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
-3. read open ended structs like MIDIRawData, MIDIMetaEvent, MusicEventUserData when pointed to by UnsafePointer<...>
+### 3. read open ended structs like `MIDIRawData`, `MIDIMetaEvent`, `MusicEventUserData` when pointed to by `UnsafePointer<...>`
 
   see [OpenEndedStructs/main.swift](OpenEndedStructs/main.swift)
   
@@ -35,7 +35,7 @@ inline const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _N
 - get an `UnsafePointer<MIDIPacket>` to the next packet from an `UnsaferPointer<MIDIPacket>`
 
 These functions are needed when iterating over the packets in a packetList without copying the packet.
-MIDIPacketNext from the CoreMIDI API works with pointer-offsets. The next packet must follow the current packet in the same memory block.
+`MIDIPacketNext` from the CoreMIDI API works with pointer-offsets. The next packet must follow the current packet in the same memory block.
 
 see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions]
 
