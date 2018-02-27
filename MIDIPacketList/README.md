@@ -17,7 +17,7 @@ for packet in packetList.packets {
 }
 
 ```
-Extend UnsafePointer<MIDIPacketList> to return a custom `PacketList` struct:
+Extend `UnsafePointer<MIDIPacketList>` to return a custom `PacketList` struct:
 
 ```swift
 extension UnsafePointer where Pointee == MIDIPacketList {
