@@ -39,12 +39,27 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 
 see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
 
-### MIDIPacketGetData
+### MIDIPacketGetData, MusicEventUserDataGetData, MusicEventUserDataGetData, MIDIRawDataGetData
 
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
 ```
-- access data field of MIDIPacket struct as `UnsafePointer<UInt8>` from an `UnsafePointer<MIDIPacket>`
 see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function
+```c
+inline const UInt8 * _Nonnull MusicEventUserDataGetData(const MusicEventUserData* _Nonnull  event);
+```
+see [UserEventData.swift](Common/UserEventData.swift) for a use of this function
+```c
+inline const UInt8 * _Nonnull MIDIMetaEventGetData(const MIDIMetaEvent* _Nonnull  event);
+```
+see [MetaEventData.swift](Common/MetaEventData.swift) for a use of this function
+```c
+inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
+```
+see [RawData.swift](Common/RawData.swift) for a use of this function
+
+- access data fields as`UnsafePointer<UInt8>` from `UnsafePointer<MIDIPacket>`, `UnsafePointer<MusicEventUserData>`, `UnsafePointer<MIDIMetaEvent>`, `UnsafePointer<MIDIRawData>`
+
+
 
  
