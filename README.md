@@ -5,15 +5,15 @@ Some simple c-functions to extend the existing CoreMIDI APi for swift.
 
 These simple extensions make it possible to do the following three things in swift:
 
-- iterate over packets in a packetlist (packets may be longer than 256 bytes)
+1. iterate over packets in a packetlist (packets may be longer than 256 bytes)
 
   see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
-- add packets to packetLists
+2. add packets to packetLists
 
   see [MIDIPacketList/main.swift](MIDIPacketList/main.swift)
   
-- read open ended structs like MIDIRawData, MIDIMetaEvent, MusicEventUserData when pointed to by UnsafePointer<...>
+3. read open ended structs like MIDIRawData, MIDIMetaEvent, MusicEventUserData when pointed to by UnsafePointer<...>
 
   see [OpenEndedStructs/main.swift](OpenEndedStructs/main.swift)
   
@@ -23,7 +23,7 @@ These simple extensions make it possible to do the following three things in swi
   
   see [MusicEventUserData/main.swift](MusicEventUserData/main.swift)
 
-### MIDIPacketGetNextPacket, MIDIPacketListGetPacket
+### 1. MIDIPacketGetNextPacket, MIDIPacketListGetPacket
 
 ```c
 inline const MIDIPacket * _Nonnull MIDIPacketListGetPacket(const MIDIPacketList * _Nonnull packetList);
@@ -39,7 +39,7 @@ MIDIPacketNext from the CoreMIDI API works with pointer-offsets. The next packet
 
 see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions]
 
-### PacketListInit, PacketListAdd
+### 2. PacketListInit, PacketListAdd
 
 ```c
 inline MIDIPacket * _Nullable PacketListInit(MIDIPacketList * _Nonnull packetList);
@@ -53,7 +53,7 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 
 see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
 
-### get pointers to data fields from pointers to const structs
+### 3. get pointers to data fields from pointers to const structs
 
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
