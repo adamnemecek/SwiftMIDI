@@ -39,7 +39,7 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 
 see [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions
 
-### MIDIPacketGetData, MusicEventUserDataGetData, MusicEventUserDataGetData, MIDIRawDataGetData
+### get pointers to data fields from pointers to const structs
 
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
