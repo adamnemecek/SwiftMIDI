@@ -1,5 +1,5 @@
 # SwiftMIDI
-extend CoreMIDI API for swift
+Extensions to CoreMIDI API for swift.
 
 I wrote some simple c-functions to extend the existing CoreMIDI APi for swift.
 
