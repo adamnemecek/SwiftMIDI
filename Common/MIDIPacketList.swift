@@ -73,7 +73,7 @@ struct MutablePacketList {
         }
         
         if packetSize > MutablePacketList.maxPackageListSize {
-            packetSize = Int(MutablePacketList.maxPackageListSize)
+            packetSize = MutablePacketList.maxPackageListSize
         }
         return packetSize
     }
