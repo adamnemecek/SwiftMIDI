@@ -8,6 +8,7 @@ These simple extensions make it possible to do the following three things in swi
 ### 1. iterate over packets in a packetlist (packets may be longer than 256 bytes)
 
 See [MIDIPacketList/README.md](MIDIPacketList/README.md#1).
+See alos [IterateOverCopiedPackets/README.md](IterateOverCopiedPackets/README.md#1).
   
 ### 2. add packets to packetLists
 
