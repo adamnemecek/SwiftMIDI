@@ -56,6 +56,7 @@ inline MIDIPacket *_Nullable PacketListAdd(MIDIPacketList * _Nonnull packetList,
 See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these functions.
 
 ### 3. get pointers to data fields from pointers to const structs
+- access data fields as`UnsafePointer<UInt8>` from `UnsafePointer<MIDIPacket>`, `UnsafePointer<MusicEventUserData>`, `UnsafePointer<MIDIMetaEvent>`, `UnsafePointer<MIDIRawData>`
 a) MIDIPacketGetData returns pointer to data field of MIDIPacket:
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
@@ -79,9 +80,6 @@ d) MIDIRawDataGetData returns pointer to data field of MIDIRawDataGetData:
 inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
 ```
 See [RawData.swift](Common/RawData.swift) for a use of this function.
-
-
-- access data fields as`UnsafePointer<UInt8>` from `UnsafePointer<MIDIPacket>`, `UnsafePointer<MusicEventUserData>`, `UnsafePointer<MIDIMetaEvent>`, `UnsafePointer<MIDIRawData>`
 
 
 
