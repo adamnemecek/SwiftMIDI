@@ -205,9 +205,6 @@
 		79BBD0C62045C10E00146AF5 /* MIDIRawData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MIDIRawData; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BBD0C82045C10E00146AF5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		79C233DF2045F998001F1D34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		79C233E02045F9AE001F1D34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		79C233E12045F9BD001F1D34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		79C233E22045F9CA001F1D34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79D1A93F2045D3FA00AEE9C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79DB00CD2044349200825C31 /* ReadMIDIPacketList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReadMIDIPacketList; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DB00CF2044349200825C31 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -299,7 +296,6 @@
 		7985D37A204561030050E884 /* MusicEventUserData */ = {
 			isa = PBXGroup;
 			children = (
-				79C233E12045F9BD001F1D34 /* README.md */,
 				7985D37B204561030050E884 /* main.swift */,
 			);
 			path = MusicEventUserData;
@@ -308,7 +304,6 @@
 		79B522D5204495CA004E30D4 /* OpenEndedStructs */ = {
 			isa = PBXGroup;
 			children = (
-				79C233E02045F9AE001F1D34 /* README.md */,
 				79B522D6204495CA004E30D4 /* main.swift */,
 			);
 			path = OpenEndedStructs;
@@ -317,7 +312,6 @@
 		79BBD0B52045B21C00146AF5 /* MIDIMetaEvent */ = {
 			isa = PBXGroup;
 			children = (
-				79C233E22045F9CA001F1D34 /* README.md */,
 				79BBD0B62045B21C00146AF5 /* main.swift */,
 			);
 			path = MIDIMetaEvent;

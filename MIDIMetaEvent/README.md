@@ -1,2 +1,0 @@
-# Use MIDIMetaEvent in swift.
-
