@@ -24,6 +24,8 @@ See [MIDIRawData/main.swift](MIDIRawData/main.swift).
   
 See [MusicEventUserData/main.swift](MusicEventUserData/main.swift).
 
+## C-Functions extending CoreMIDI:
+
 ### 1. MIDIPacketGetNextPacket, MIDIPacketListGetPacket
 
 Get an `UnsafePointer<MIDIPacket>` to the first packet from an `UnsaferPointer<MIDIPacketList>`:
