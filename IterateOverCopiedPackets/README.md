@@ -59,6 +59,7 @@ func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
 }
 ```
 To do this in swift two functions are needed:
+1. MIDIPacketListGetPacket
 ```swift
 public func MIDIPacketListGetPacket(_ packetList: UnsafePointer<MIDIPacketList>) -> UnsafePointer<MIDIPacket>
 ```
@@ -70,6 +71,7 @@ const MIDIPacket *  _Nonnull MIDIPacketListGetPacket(const MIDIPacketList *  _No
 }
 }
 ```
+2. MIDIPacketGetNextPacket
 ```swift
 public func MIDIPacketGetNextPacket(_ packet: UnsafePointer<MIDIPacket>) -> UnsafePointer<MIDIPacket>
 ```
