@@ -42,22 +42,6 @@ void iterateOverPointedPackets(const MIDIPacketList *packetList) {
     }
 }
 ```
-In swift it can be used like this:
-
-```swift
-func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
-
-    var packet = MIDIPacketListGetPacket(packetList)
-
-    for i in 0..<packetList.pointee.numPackets {
-
-        // use packet as UnsafePointer<MIDIPacket>
-
-        // copies pointer to const MIDIPacket
-        packet =  MIDIPacketGetNextPacket(packet)
-    }
-}
-```
 To do this in swift two functions are needed:
 1. MIDIPacketListGetPacket
 ```swift
@@ -79,5 +63,21 @@ Implemeted in c:
 // the only diference to MIDIPacketNext is the const specifier of the result
 const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _Nonnull packet) {
     return MIDIPacketNext(packet);
+}
+```
+Now iterating over pointet packets in swift it can be done like this:
+
+```swift
+func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
+
+var packet = MIDIPacketListGetPacket(packetList)
+
+for i in 0..<packetList.pointee.numPackets {
+
+// use packet as UnsafePointer<MIDIPacket>
+
+// copies pointer to const MIDIPacket
+packet =  MIDIPacketGetNextPacket(packet)
+}
 }
 ```
