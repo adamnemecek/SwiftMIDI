@@ -42,7 +42,7 @@ void iterateOverPointedPackets(const MIDIPacketList *packetList) {
     }
 }
 ```
-In Swift it can be used like this:
+In swift it can be used like this:
 
 ```swift
 func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
