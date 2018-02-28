@@ -13,8 +13,8 @@ See [MIDIPacketList/README.md](MIDIPacketList/README.md#1).
 
 See [MIDIPacketList/README.md](MIDIPacketList/README.md#2).
   
-### 3. read data out of open ended structs like when pointed to by `UnsafePointer<...>`
-`MIDIRawData`, `MIDIMetaEvent`, `MusicEventUserData` 
+### 3. read data out of open ended structs like when pointed to by UnsafePointer<...>
+These structs are :`MIDIRawData`, `MIDIMetaEvent`, `MusicEventUserData`. 
 
 See [OpenEndedStructs/main.swift](OpenEndedStructs/main.swift).
   
