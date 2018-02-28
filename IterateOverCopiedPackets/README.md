@@ -69,7 +69,6 @@ Implemeted in c:
 const MIDIPacket *  _Nonnull MIDIPacketListGetPacket(const MIDIPacketList *  _Nonnull packetList) {
     return packetList->packet;
 }
-}
 ```
 2. MIDIPacketGetNextPacket
 ```swift
