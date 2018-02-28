@@ -26,7 +26,7 @@ func iterateOverCopiedPackets(packetList:UnsafePointer<MIDIPacketList>){
 MIDIPacketNext in c calculates the address of the next packet from the current packet's memory address and the length field.
 To use it safely the address of the packet passed to it must be part of the same memory.
 
-In c it would be use like this:
+In c it would be used like this:
 
 ```c
 
