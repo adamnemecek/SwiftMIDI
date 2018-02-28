@@ -70,14 +70,14 @@ Now iterating over pointet packets in swift it can be done like this:
 ```swift
 func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
 
-var packet = MIDIPacketListGetPacket(packetList)
+ var packet = MIDIPacketListGetPacket(packetList)
 
-for i in 0..<packetList.pointee.numPackets {
+ for i in 0..<packetList.pointee.numPackets {
 
-// use packet as UnsafePointer<MIDIPacket>
+  // use packet as UnsafePointer<MIDIPacket>
 
-// copies pointer to const MIDIPacket
-packet =  MIDIPacketGetNextPacket(packet)
-}
+  // copies pointer to const MIDIPacket
+  packet =  MIDIPacketGetNextPacket(packet)
+ }
 }
 ```
