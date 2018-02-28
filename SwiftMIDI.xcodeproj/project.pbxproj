@@ -29,7 +29,6 @@
 		7909A67A20454262004ACE3B /* RawData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909A67920454262004ACE3B /* RawData.swift */; };
 		7909A67C20454287004ACE3B /* MetaEventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909A67B20454287004ACE3B /* MetaEventData.swift */; };
 		7909A67E204542A4004ACE3B /* UserEventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909A67D204542A4004ACE3B /* UserEventData.swift */; };
-		792830492046822F008E3EE0 /* IteratePacketListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792830482046822F008E3EE0 /* IteratePacketListTests.swift */; };
 		7928304E204682FA008E3EE0 /* MIDIPacketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E00EF20454CE800882A25 /* MIDIPacketList.swift */; };
 		7928304F20468304008E3EE0 /* HeadedBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B522DD204496C7004E30D4 /* HeadedBytes.swift */; };
 		7928305020468537008E3EE0 /* MIDIPacketListExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F9F5F204544DD003862F3 /* MIDIPacketListExtensions.m */; };
@@ -179,8 +178,6 @@
 		7909A67D204542A4004ACE3B /* UserEventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEventData.swift; path = Common/UserEventData.swift; sourceTree = SOURCE_ROOT; };
 		7909CB432046C77200028BBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		792830462046822F008E3EE0 /* SwiftMIDITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMIDITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		792830482046822F008E3EE0 /* IteratePacketListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratePacketListTests.swift; sourceTree = "<group>"; };
-		7928304A2046822F008E3EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7928305620468A07008E3EE0 /* IterateOverCopiedPackets */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IterateOverCopiedPackets; sourceTree = BUILT_PRODUCTS_DIR; };
 		7928305820468A07008E3EE0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		792A313220445FDA0009DEF2 /* SwiftMIDI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftMIDI-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -263,15 +260,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		792830472046822F008E3EE0 /* SwiftMIDITests */ = {
-			isa = PBXGroup;
-			children = (
-				792830482046822F008E3EE0 /* IteratePacketListTests.swift */,
-				7928304A2046822F008E3EE0 /* Info.plist */,
-			);
-			path = SwiftMIDITests;
-			sourceTree = "<group>";
-		};
 		7928305720468A07008E3EE0 /* IterateOverCopiedPackets */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,7 +325,6 @@
 				7985D37A204561030050E884 /* MusicEventUserData */,
 				79BBD0B52045B21C00146AF5 /* MIDIMetaEvent */,
 				79BBD0C72045C10E00146AF5 /* MIDIRawData */,
-				792830472046822F008E3EE0 /* SwiftMIDITests */,
 				79DB00C02044345600825C31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -592,7 +579,6 @@
 				7928305120468553008E3EE0 /* MIDIPointerExtensions.m in Sources */,
 				7928305020468537008E3EE0 /* MIDIPacketListExtensions.m in Sources */,
 				7928304E204682FA008E3EE0 /* MIDIPacketList.swift in Sources */,
-				792830492046822F008E3EE0 /* IteratePacketListTests.swift in Sources */,
 				7928304F20468304008E3EE0 /* HeadedBytes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
