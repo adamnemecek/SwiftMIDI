@@ -60,25 +60,25 @@ See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of these funct
 ### 3. GetData functions return pointers to data fields from pointers to const structs
 - access data fields of `UnsafePointer<MIDIPacket>`, `UnsafePointer<MusicEventUserData>`, `UnsafePointer<MIDIMetaEvent>`, `UnsafePointer<MIDIRawData>` as pointer instead of one-tuple
   
-**MIDIPacketGetData** returns a pointer to the data field of MIDIPacket:
+**MIDIPacketGetData** returns a pointer to the data field of **MIDIPacket**:
 ```c
 inline const UInt8 * _Nonnull MIDIPacketGetData(const MIDIPacket * _Nonnull packet);
 ```
 See [MIDIPacketList.swift](Common/MIDIPacketList.swift) for a use of this function.
 
-**MusicEventUserDataGetData** returns a pointer to the data field of MusicEventUserDataGetData:
+**MusicEventUserDataGetData** returns a pointer to the data field of **MusicEventUserDataGetData**:
 ```c
 inline const UInt8 * _Nonnull MusicEventUserDataGetData(const MusicEventUserData* _Nonnull  event);
 ```
 See [UserEventData.swift](Common/UserEventData.swift) for a use of this function.
 
-**MIDIMetaEventGetData** returns pointer to data field of MIDIMetaEventGetData:
+**MIDIMetaEventGetData** returns pointer to data field of **MIDIMetaEvent**:
 ```c
 inline const UInt8 * _Nonnull MIDIMetaEventGetData(const MIDIMetaEvent* _Nonnull  event);
 ```
 See [MetaEventData.swift](Common/MetaEventData.swift) for a use of this function.
 
-**MIDIRawDataGetData** returns a pointer to the data field of MIDIRawDataGetData:
+**MIDIRawDataGetData** returns a pointer to the data field of **MIDIRawData**:
 ```c
 inline const UInt8 * _Nonnull MIDIRawDataGetData(const MIDIRawData* _Nonnull  data);
 ```
