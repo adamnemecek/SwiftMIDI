@@ -1,5 +1,7 @@
 #  Iterate over packets in a packet list
 
+Shows why iterating over a packet list using copied packets may result in reading junk data from the packets.
+
 ```swift
 func iterateOverCopiedPackets(packetList:UnsafePointer<MIDIPacketList>){
 
@@ -20,6 +22,24 @@ func iterateOverCopiedPackets(packetList:UnsafePointer<MIDIPacketList>){
     }
 }
 ```
+MIDIPacketNext in c calculates the address of the next packet from the current packet's memory address and the length field.
+To use it safely the address of the packet passed to it must be part of the same memory.
+
+In c it would be use like this:
+
+```c
+const MIDIPacketList *packetList = ... // the orinal list
+
+const MIDIPacket *packet = packetList->packet
+
+for(Int i = 0, i < packetList->numPackets; ++i){
+
+    // use packet as UnsafePointer<MIDIPacket>
+    
+    packet = MIDIPacketNext(packet);
+}
+
+```
 
 ```swift
 func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
@@ -28,10 +48,10 @@ func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
     
     for i in 0..<packetList.pointee.numPackets {
 
+        // use packet as UnsafePointer<MIDIPacket>
+        
         // copies pointer to const MIDIPacket
         packet =  MIDIPacketGetNextPacket(packet)
-        
-        // use packet as UnsafePointer<MIDIPacket>
     }
 }
 ```
