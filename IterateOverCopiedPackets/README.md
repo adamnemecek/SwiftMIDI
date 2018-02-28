@@ -58,3 +58,25 @@ func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
     }
 }
 ```
+To do this in swift two functions are needed:
+```swift
+public func MIDIPacketListGetPacket(_ packetList: UnsafePointer<MIDIPacketList>) -> UnsafePointer<MIDIPacket>
+```
+Implemeted in c:
+```c
+// get pointer to const field from a pointer to a const struct, not possible in swift
+const MIDIPacket *  _Nonnull MIDIPacketListGetPacket(const MIDIPacketList *  _Nonnull packetList) {
+    return packetList->packet;
+}
+}
+```
+```swift
+public func MIDIPacketGetNextPacket(_ packet: UnsafePointer<MIDIPacket>) -> UnsafePointer<MIDIPacket>
+```
+Implemeted in c:
+```c
+// the only diference to MIDIPacketNext is the const specifier of the result
+const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _Nonnull packet) {
+    return MIDIPacketNext(packet);
+}
+```
