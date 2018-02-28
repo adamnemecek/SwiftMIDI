@@ -177,6 +177,7 @@
 		7909A67920454262004ACE3B /* RawData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RawData.swift; path = Common/RawData.swift; sourceTree = SOURCE_ROOT; };
 		7909A67B20454287004ACE3B /* MetaEventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetaEventData.swift; path = Common/MetaEventData.swift; sourceTree = SOURCE_ROOT; };
 		7909A67D204542A4004ACE3B /* UserEventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEventData.swift; path = Common/UserEventData.swift; sourceTree = SOURCE_ROOT; };
+		7909CB432046C77200028BBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		792830462046822F008E3EE0 /* SwiftMIDITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMIDITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		792830482046822F008E3EE0 /* IteratePacketListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratePacketListTests.swift; sourceTree = "<group>"; };
 		7928304A2046822F008E3EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -278,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				7928305820468A07008E3EE0 /* main.swift */,
+				7909CB432046C77200028BBD /* README.md */,
 			);
 			path = IterateOverCopiedPackets;
 			sourceTree = "<group>";
