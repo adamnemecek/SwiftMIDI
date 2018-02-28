@@ -14,9 +14,11 @@
 			);
 			dependencies = (
 				792E010A204552F100882A25 /* PBXTargetDependency */,
+				7928306420469FDF008E3EE0 /* PBXTargetDependency */,
 				792E010C204552F100882A25 /* PBXTargetDependency */,
-				79BBD0BD2045B25900146AF5 /* PBXTargetDependency */,
 				7985D3812045610D0050E884 /* PBXTargetDependency */,
+				79BBD0BD2045B25900146AF5 /* PBXTargetDependency */,
+				7928306220469FCC008E3EE0 /* PBXTargetDependency */,
 			);
 			name = "build all";
 			productName = "build all";
@@ -27,6 +29,16 @@
 		7909A67A20454262004ACE3B /* RawData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909A67920454262004ACE3B /* RawData.swift */; };
 		7909A67C20454287004ACE3B /* MetaEventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909A67B20454287004ACE3B /* MetaEventData.swift */; };
 		7909A67E204542A4004ACE3B /* UserEventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7909A67D204542A4004ACE3B /* UserEventData.swift */; };
+		792830492046822F008E3EE0 /* IteratePacketListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792830482046822F008E3EE0 /* IteratePacketListTests.swift */; };
+		7928304E204682FA008E3EE0 /* MIDIPacketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E00EF20454CE800882A25 /* MIDIPacketList.swift */; };
+		7928304F20468304008E3EE0 /* HeadedBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B522DD204496C7004E30D4 /* HeadedBytes.swift */; };
+		7928305020468537008E3EE0 /* MIDIPacketListExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F9F5F204544DD003862F3 /* MIDIPacketListExtensions.m */; };
+		7928305120468553008E3EE0 /* MIDIPointerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F9F60204544DD003862F3 /* MIDIPointerExtensions.m */; };
+		7928305920468A07008E3EE0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928305820468A07008E3EE0 /* main.swift */; };
+		7928305D20468A23008E3EE0 /* MIDIPacketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E00EF20454CE800882A25 /* MIDIPacketList.swift */; };
+		7928305E20468A3A008E3EE0 /* HeadedBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B522DD204496C7004E30D4 /* HeadedBytes.swift */; };
+		7928305F20468A48008E3EE0 /* MIDIPacketListExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F9F5F204544DD003862F3 /* MIDIPacketListExtensions.m */; };
+		7928306020468A4D008E3EE0 /* MIDIPointerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F9F60204544DD003862F3 /* MIDIPointerExtensions.m */; };
 		792E00F020454CE800882A25 /* MIDIPacketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E00EF20454CE800882A25 /* MIDIPacketList.swift */; };
 		796F9F62204544DD003862F3 /* MIDIPacketListExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F9F5F204544DD003862F3 /* MIDIPacketListExtensions.m */; };
 		796F9F63204544DD003862F3 /* MIDIPointerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 796F9F60204544DD003862F3 /* MIDIPointerExtensions.m */; };
@@ -60,6 +72,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7928306120469FCC008E3EE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79DB00B72044345600825C31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79BBD0C52045C10E00146AF5;
+			remoteInfo = MIDIRawData;
+		};
+		7928306320469FDF008E3EE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79DB00B72044345600825C31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7928305520468A07008E3EE0;
+			remoteInfo = IterateOverCopiedPackets;
+		};
 		792E0109204552F100882A25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79DB00B72044345600825C31 /* Project object */;
@@ -91,6 +117,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7928305420468A07008E3EE0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		7985D377204561030050E884 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +177,11 @@
 		7909A67920454262004ACE3B /* RawData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RawData.swift; path = Common/RawData.swift; sourceTree = SOURCE_ROOT; };
 		7909A67B20454287004ACE3B /* MetaEventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetaEventData.swift; path = Common/MetaEventData.swift; sourceTree = SOURCE_ROOT; };
 		7909A67D204542A4004ACE3B /* UserEventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEventData.swift; path = Common/UserEventData.swift; sourceTree = SOURCE_ROOT; };
+		792830462046822F008E3EE0 /* SwiftMIDITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMIDITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		792830482046822F008E3EE0 /* IteratePacketListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IteratePacketListTests.swift; sourceTree = "<group>"; };
+		7928304A2046822F008E3EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7928305620468A07008E3EE0 /* IterateOverCopiedPackets */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IterateOverCopiedPackets; sourceTree = BUILT_PRODUCTS_DIR; };
+		7928305820468A07008E3EE0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		792A313220445FDA0009DEF2 /* SwiftMIDI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftMIDI-Bridging-Header.h"; sourceTree = "<group>"; };
 		792E00EF20454CE800882A25 /* MIDIPacketList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDIPacketList.swift; sourceTree = "<group>"; };
 		792E00F22045517A00882A25 /* TestTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTrack.swift; sourceTree = "<group>"; };
@@ -173,6 +213,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		792830432046822F008E3EE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7928305320468A07008E3EE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7985D376204561030050E884 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,6 +265,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		792830472046822F008E3EE0 /* SwiftMIDITests */ = {
+			isa = PBXGroup;
+			children = (
+				792830482046822F008E3EE0 /* IteratePacketListTests.swift */,
+				7928304A2046822F008E3EE0 /* Info.plist */,
+			);
+			path = SwiftMIDITests;
+			sourceTree = "<group>";
+		};
+		7928305720468A07008E3EE0 /* IterateOverCopiedPackets */ = {
+			isa = PBXGroup;
+			children = (
+				7928305820468A07008E3EE0 /* main.swift */,
+			);
+			path = IterateOverCopiedPackets;
+			sourceTree = "<group>";
+		};
 		792E00F12045517A00882A25 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,10 +336,12 @@
 				792E00F12045517A00882A25 /* Testing */,
 				79DB00E12044406700825C31 /* Common */,
 				79DB00CE2044349200825C31 /* MIDIPacketList */,
+				7928305720468A07008E3EE0 /* IterateOverCopiedPackets */,
 				79B522D5204495CA004E30D4 /* OpenEndedStructs */,
 				7985D37A204561030050E884 /* MusicEventUserData */,
 				79BBD0B52045B21C00146AF5 /* MIDIMetaEvent */,
 				79BBD0C72045C10E00146AF5 /* MIDIRawData */,
+				792830472046822F008E3EE0 /* SwiftMIDITests */,
 				79DB00C02044345600825C31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -281,6 +354,8 @@
 				7985D379204561030050E884 /* MusicEventUserData */,
 				79BBD0B42045B21C00146AF5 /* MIDIMetaEvent */,
 				79BBD0C62045C10E00146AF5 /* MIDIRawData */,
+				792830462046822F008E3EE0 /* SwiftMIDITests.xctest */,
+				7928305620468A07008E3EE0 /* IterateOverCopiedPackets */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -315,6 +390,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		792830452046822F008E3EE0 /* SwiftMIDITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7928304D2046822F008E3EE0 /* Build configuration list for PBXNativeTarget "SwiftMIDITests" */;
+			buildPhases = (
+				792830422046822F008E3EE0 /* Sources */,
+				792830432046822F008E3EE0 /* Frameworks */,
+				792830442046822F008E3EE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftMIDITests;
+			productName = SwiftMIDITests;
+			productReference = 792830462046822F008E3EE0 /* SwiftMIDITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7928305520468A07008E3EE0 /* IterateOverCopiedPackets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7928305A20468A07008E3EE0 /* Build configuration list for PBXNativeTarget "IterateOverCopiedPackets" */;
+			buildPhases = (
+				7928305220468A07008E3EE0 /* Sources */,
+				7928305320468A07008E3EE0 /* Frameworks */,
+				7928305420468A07008E3EE0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IterateOverCopiedPackets;
+			productName = IterateOverCopiedPackets;
+			productReference = 7928305620468A07008E3EE0 /* IterateOverCopiedPackets */;
+			productType = "com.apple.product-type.tool";
+		};
 		7985D378204561030050E884 /* MusicEventUserData */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7985D37D204561030050E884 /* Build configuration list for PBXNativeTarget "MusicEventUserData" */;
@@ -410,6 +519,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Jan Ratschko";
 				TargetAttributes = {
+					792830452046822F008E3EE0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					7928305520468A07008E3EE0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					792E0105204552E800882A25 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -451,15 +568,51 @@
 			targets = (
 				792E0105204552E800882A25 /* build all */,
 				79DB00CC2044349200825C31 /* ReadMIDIPacketList */,
+				7928305520468A07008E3EE0 /* IterateOverCopiedPackets */,
 				79B522D3204495CA004E30D4 /* OpenEndedStructs */,
 				7985D378204561030050E884 /* MusicEventUserData */,
 				79BBD0B32045B21C00146AF5 /* MIDIMetaEvent */,
 				79BBD0C52045C10E00146AF5 /* MIDIRawData */,
+				792830452046822F008E3EE0 /* SwiftMIDITests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		792830442046822F008E3EE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		792830422046822F008E3EE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7928305120468553008E3EE0 /* MIDIPointerExtensions.m in Sources */,
+				7928305020468537008E3EE0 /* MIDIPacketListExtensions.m in Sources */,
+				7928304E204682FA008E3EE0 /* MIDIPacketList.swift in Sources */,
+				792830492046822F008E3EE0 /* IteratePacketListTests.swift in Sources */,
+				7928304F20468304008E3EE0 /* HeadedBytes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7928305220468A07008E3EE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7928306020468A4D008E3EE0 /* MIDIPointerExtensions.m in Sources */,
+				7928305F20468A48008E3EE0 /* MIDIPacketListExtensions.m in Sources */,
+				7928305D20468A23008E3EE0 /* MIDIPacketList.swift in Sources */,
+				7928305920468A07008E3EE0 /* main.swift in Sources */,
+				7928305E20468A3A008E3EE0 /* HeadedBytes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7985D375204561030050E884 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,6 +684,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7928306220469FCC008E3EE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79BBD0C52045C10E00146AF5 /* MIDIRawData */;
+			targetProxy = 7928306120469FCC008E3EE0 /* PBXContainerItemProxy */;
+		};
+		7928306420469FDF008E3EE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7928305520468A07008E3EE0 /* IterateOverCopiedPackets */;
+			targetProxy = 7928306320469FDF008E3EE0 /* PBXContainerItemProxy */;
+		};
 		792E010A204552F100882A25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 79DB00CC2044349200825C31 /* ReadMIDIPacketList */;
@@ -554,6 +717,58 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7928304B2046822F008E3EE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QNDGEDSUYJ;
+				INFOPLIST_FILE = SwiftMIDITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.jratschko.SwiftMIDITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/SwiftMIDI-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		7928304C2046822F008E3EE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QNDGEDSUYJ;
+				INFOPLIST_FILE = SwiftMIDITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.jratschko.SwiftMIDITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/SwiftMIDI-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		7928305B20468A07008E3EE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QNDGEDSUYJ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/SwiftMIDI-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		7928305C20468A07008E3EE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QNDGEDSUYJ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Common/SwiftMIDI-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		792E0107204552E800882A25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -796,6 +1011,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7928304D2046822F008E3EE0 /* Build configuration list for PBXNativeTarget "SwiftMIDITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7928304B2046822F008E3EE0 /* Debug */,
+				7928304C2046822F008E3EE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7928305A20468A07008E3EE0 /* Build configuration list for PBXNativeTarget "IterateOverCopiedPackets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7928305B20468A07008E3EE0 /* Debug */,
+				7928305C20468A07008E3EE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		792E0106204552E800882A25 /* Build configuration list for PBXAggregateTarget "build all" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
