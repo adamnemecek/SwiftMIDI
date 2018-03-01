@@ -7,17 +7,17 @@
 		<key>IteratePacketList.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>MIDIMetaEvent.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>MIDIPacketList.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>MIDIRawData.xcscheme</key>
 		<dict>
@@ -27,7 +27,7 @@
 		<key>MusicEventUserData.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
 		</dict>
 		<key>SwiftMIDITests.xcscheme</key>
 		<dict>
@@ -48,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>792E0105204552E800882A25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7985D378204561030050E884</key>
 		<dict>
 			<key>primary</key>
 			<true/>
