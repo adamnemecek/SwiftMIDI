@@ -1,6 +1,6 @@
 # SwiftMIDI
 
-Some usefull extensions for using CoreMIDI in swift.
+Some extensions for using CoreMIDI in swift.
 
 ## Iterate packet list with packets bigger than 256 bytes:
 
