@@ -47,7 +47,7 @@ Iterating over pointet packets in swift it can be done like this:
 extension UnsafePointer {
     var mutable:UnsafeMutablePointer<Pointee> {
         return .init(mutating: self)
-        }
+    }
     init(fromMutable:UnsafeMutablePointer<Pointee>) {
         self.init(fromMutable)
     }
@@ -75,7 +75,7 @@ extension UnsafePointer where Pointee == MIDIPacket {
 ```swift
 func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
 
-     var packet = packetList.packet
+    var packet = packetList.packet
 
     for i in 0..<packetList.pointee.numPackets {
 
