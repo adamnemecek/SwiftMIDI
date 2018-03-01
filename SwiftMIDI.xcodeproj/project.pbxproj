@@ -25,6 +25,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		790EB6712047E8BB00C10D59 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790EB6702047E8BB00C10D59 /* UnsafePointer.swift */; };
+		790EB6722047E98000C10D59 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790EB6702047E8BB00C10D59 /* UnsafePointer.swift */; };
+		790EB6732047E99800C10D59 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790EB6702047E8BB00C10D59 /* UnsafePointer.swift */; };
+		790EB6742047E99900C10D59 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790EB6702047E8BB00C10D59 /* UnsafePointer.swift */; };
+		790EB6752047E99A00C10D59 /* UnsafePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790EB6702047E8BB00C10D59 /* UnsafePointer.swift */; };
 		7928305920468A07008E3EE0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7928305820468A07008E3EE0 /* main.swift */; };
 		7928305D20468A23008E3EE0 /* MIDIPacketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E00EF20454CE800882A25 /* MIDIPacketList.swift */; };
 		7928305E20468A3A008E3EE0 /* HeadedBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B522DD204496C7004E30D4 /* HeadedBytes.swift */; };
@@ -147,7 +152,8 @@
 		7909A67B20454287004ACE3B /* MetaEventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetaEventData.swift; path = Common/MetaEventData.swift; sourceTree = SOURCE_ROOT; };
 		7909A67D204542A4004ACE3B /* UserEventData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserEventData.swift; path = Common/UserEventData.swift; sourceTree = SOURCE_ROOT; };
 		7909CB432046C77200028BBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		7928305620468A07008E3EE0 /* IterateOverCopiedPackets */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IterateOverCopiedPackets; sourceTree = BUILT_PRODUCTS_DIR; };
+		790EB6702047E8BB00C10D59 /* UnsafePointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsafePointer.swift; sourceTree = "<group>"; };
+		7928305620468A07008E3EE0 /* IteratePacketList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IteratePacketList; sourceTree = BUILT_PRODUCTS_DIR; };
 		7928305820468A07008E3EE0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		792E00EF20454CE800882A25 /* MIDIPacketList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIDIPacketList.swift; sourceTree = "<group>"; };
 		792E00F22045517A00882A25 /* TestTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTrack.swift; sourceTree = "<group>"; };
@@ -277,7 +283,7 @@
 				7985D379204561030050E884 /* MusicEventUserData */,
 				79BBD0B42045B21C00146AF5 /* MIDIMetaEvent */,
 				79BBD0C62045C10E00146AF5 /* MIDIRawData */,
-				7928305620468A07008E3EE0 /* IterateOverCopiedPackets */,
+				7928305620468A07008E3EE0 /* IteratePacketList */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				792E00EF20454CE800882A25 /* MIDIPacketList.swift */,
+				790EB6702047E8BB00C10D59 /* UnsafePointer.swift */,
 				7975F6E92047D218007BA007 /* MutablePacketList.swift */,
 				7975F6E62047CD6D007BA007 /* MIDIPacket.swift */,
 				79B522DD204496C7004E30D4 /* HeadedBytes.swift */,
@@ -309,9 +316,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7928305520468A07008E3EE0 /* IterateOverCopiedPackets */ = {
+		7928305520468A07008E3EE0 /* IteratePacketList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7928305A20468A07008E3EE0 /* Build configuration list for PBXNativeTarget "IterateOverCopiedPackets" */;
+			buildConfigurationList = 7928305A20468A07008E3EE0 /* Build configuration list for PBXNativeTarget "IteratePacketList" */;
 			buildPhases = (
 				7928305220468A07008E3EE0 /* Sources */,
 				7928305320468A07008E3EE0 /* Frameworks */,
@@ -321,9 +328,9 @@
 			);
 			dependencies = (
 			);
-			name = IterateOverCopiedPackets;
+			name = IteratePacketList;
 			productName = IterateOverCopiedPackets;
-			productReference = 7928305620468A07008E3EE0 /* IterateOverCopiedPackets */;
+			productReference = 7928305620468A07008E3EE0 /* IteratePacketList */;
 			productType = "com.apple.product-type.tool";
 		};
 		7985D378204561030050E884 /* MusicEventUserData */ = {
@@ -445,7 +452,7 @@
 			targets = (
 				792E0105204552E800882A25 /* build all */,
 				79DB00CC2044349200825C31 /* ReadMIDIPacketList */,
-				7928305520468A07008E3EE0 /* IterateOverCopiedPackets */,
+				7928305520468A07008E3EE0 /* IteratePacketList */,
 				7985D378204561030050E884 /* MusicEventUserData */,
 				79BBD0B32045B21C00146AF5 /* MIDIMetaEvent */,
 				79BBD0C52045C10E00146AF5 /* MIDIRawData */,
@@ -459,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7928305D20468A23008E3EE0 /* MIDIPacketList.swift in Sources */,
+				790EB6722047E98000C10D59 /* UnsafePointer.swift in Sources */,
 				7975F6EB2047D23E007BA007 /* MutablePacketList.swift in Sources */,
 				7975F6E82047CFEB007BA007 /* MIDIPacket.swift in Sources */,
 				7928305920468A07008E3EE0 /* main.swift in Sources */,
@@ -471,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7985D385204561AD0050E884 /* HeadedBytes.swift in Sources */,
+				790EB6752047E99A00C10D59 /* UnsafePointer.swift in Sources */,
 				7985D3832045613E0050E884 /* TestTrack.swift in Sources */,
 				7987CD1E2045849E00A15FC4 /* SequenceUserCallback.swift in Sources */,
 				7985D3842045617A0050E884 /* UserEventData.swift in Sources */,
@@ -485,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79BBD0BE2045B28E00146AF5 /* TestTrack.swift in Sources */,
+				790EB6732047E99800C10D59 /* UnsafePointer.swift in Sources */,
 				79BBD0BB2045B24B00146AF5 /* TestSequence.swift in Sources */,
 				79BBD0C02045B46200146AF5 /* MetaEventData.swift in Sources */,
 				79BBD0BF2045B42800146AF5 /* HeadedBytes.swift in Sources */,
@@ -497,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79BBD0D22045C1C800146AF5 /* RawData.swift in Sources */,
+				790EB6742047E99900C10D59 /* UnsafePointer.swift in Sources */,
 				79BBD0D12045C1C500146AF5 /* HeadedBytes.swift in Sources */,
 				79BBD0CE2045C19D00146AF5 /* TestTrack.swift in Sources */,
 				79BBD0CD2045C19900146AF5 /* TestSequence.swift in Sources */,
@@ -509,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7975F6EA2047D218007BA007 /* MutablePacketList.swift in Sources */,
+				790EB6712047E8BB00C10D59 /* UnsafePointer.swift in Sources */,
 				7987CD2020458F0600A15FC4 /* TestMIDIClient.swift in Sources */,
 				7987CD1F20458EBB00A15FC4 /* TestDestination.swift in Sources */,
 				792E00F020454CE800882A25 /* MIDIPacketList.swift in Sources */,
@@ -528,7 +540,7 @@
 		};
 		7928306420469FDF008E3EE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7928305520468A07008E3EE0 /* IterateOverCopiedPackets */;
+			target = 7928305520468A07008E3EE0 /* IteratePacketList */;
 			targetProxy = 7928306320469FDF008E3EE0 /* PBXContainerItemProxy */;
 		};
 		792E010A204552F100882A25 /* PBXTargetDependency */ = {
@@ -781,7 +793,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7928305A20468A07008E3EE0 /* Build configuration list for PBXNativeTarget "IterateOverCopiedPackets" */ = {
+		7928305A20468A07008E3EE0 /* Build configuration list for PBXNativeTarget "IteratePacketList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7928305B20468A07008E3EE0 /* Debug */,
