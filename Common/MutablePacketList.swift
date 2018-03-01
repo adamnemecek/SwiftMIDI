@@ -19,22 +19,16 @@ struct MutablePacketList {
     private var currentPacket:UnsafeMutablePointer<MIDIPacket>?
     
     init(size:Int = MemoryLayout<MIDIPacketList>.size) {
-        self.size = MutablePacketList.calcSize(size)
-        packetList = HeadedBytes(size:self.size)
-        initialize()
-    }
-    
-    private static func calcSize(_ size:Int) -> Int {
         var packetSize = MemoryLayout<MIDIPacketList>.size
-        
         if size > packetSize {
             packetSize = size
         }
-        
         if packetSize > MutablePacketList.maxPackageListSize {
             packetSize = MutablePacketList.maxPackageListSize
         }
-        return packetSize
+        self.size = packetSize
+        packetList = HeadedBytes(size:self.size)
+        initialize()
     }
     
     mutating func initialize(){
