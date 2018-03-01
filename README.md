@@ -2,7 +2,7 @@
 
 Some extensions for using CoreMIDI in swift.
 
-## Iterate packet list with packets bigger than 256 bytes:
+## Iterate packet lists with packets bigger than 256 bytes:
 
 See [MIDIPacketList/main.swift](MIDIPacketList/main.swift)  and [IteratePacketList/README.md](IteratePacketList/README.md)
 
