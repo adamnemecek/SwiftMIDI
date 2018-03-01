@@ -126,7 +126,7 @@ extension UnsafePointer where Pointee == MIDIPacketList {
 ```swift
 func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
 
-    for packet in 0..<packetList.packets {
+    for packet in packetList.packets {
 
         // use packet as UnsafePointer<MIDIPacket>
 
