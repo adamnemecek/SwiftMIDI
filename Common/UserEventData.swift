@@ -18,7 +18,6 @@ extension HeadedBytes where HeaderType == MusicEventUserData {
     init(musicEventUserData data: Data) {
         self.init(numTrailingBytes: data.count) { userData in
             userData.pointee.length = UInt32(data.count)
-            
             _ = data.withUnsafeBytes { bytes in
                 memcpy(&userData.pointee.data, bytes, data.count)
             }
