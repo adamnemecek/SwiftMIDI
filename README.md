@@ -4,7 +4,7 @@ Some usefull extensions for using CoreMIDI in swift.
 
 ## Iterate packet list with packets bigger than 256 bytes:
 
-See [MIDIPacketList/main.swift](MIDIPacketList/main.swift)  and [IterateOverCopiedPackets/main.swift](IterateOverCopiedPackets/main.swift)
+See [MIDIPacketList/main.swift](MIDIPacketList/main.swift)  and [IteratePacketList/main.swift](IteratePacketList/main.swift)
 
 ## Dynamically build up packet lists:
 
