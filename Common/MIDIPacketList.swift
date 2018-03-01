@@ -38,8 +38,8 @@ extension UnsafePointer where Pointee == MIDIPacketList {
 }
 
 extension UnsafePointer where Pointee == MIDIPacketList {
-    var packets:PacketList {
-        return PacketList(self)
+    var packet:UnsafePointer<MIDIPacket> {
+        return .init(fromMutable:&self.mutable.pointee.packet)
     }
 }
 
