@@ -171,7 +171,6 @@
 		79BBD0B62045B21C00146AF5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		79BBD0C62045C10E00146AF5 /* MIDIRawData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MIDIRawData; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BBD0C82045C10E00146AF5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		79C233DF2045F998001F1D34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79D1A93F2045D3FA00AEE9C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		79DB00CD2044349200825C31 /* ReadMIDIPacketList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReadMIDIPacketList; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DB00CF2044349200825C31 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -291,7 +290,6 @@
 		79DB00CE2044349200825C31 /* MIDIPacketList */ = {
 			isa = PBXGroup;
 			children = (
-				79C233DF2045F998001F1D34 /* README.md */,
 				79DB00CF2044349200825C31 /* main.swift */,
 			);
 			path = MIDIPacketList;
