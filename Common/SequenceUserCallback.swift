@@ -12,7 +12,6 @@ protocol UserDataHandler {
     func handleUserDataEvent(sequence:MusicSequence, track:MusicTrack, timeStamp:MusicTimeStamp, userData:UnsafePointer<MusicEventUserData>, startSliceBeat:MusicTimeStamp, endSliceBeat:MusicTimeStamp)
 }
 
-
 struct UserCallback {
     
     let delegate:UserDataHandler
