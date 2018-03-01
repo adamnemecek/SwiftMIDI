@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jan Ratschko. All rights reserved.
 //
 import Foundation
-
+import AudioToolbox
 // demonstates writing and reading of user event data in swift
 
 // set up a test handler for handling user data from MusicSequence callback

@@ -42,42 +42,44 @@ void iterateOverPointedPackets(const MIDIPacketList *packetList) {
     }
 }
 ```
-To do this in swift two functions are needed:
-1. MIDIPacketListGetPacket
+Iterating over pointet packets in swift it can be done like this:
+
 ```swift
-public func MIDIPacketListGetPacket(_ packetList: UnsafePointer<MIDIPacketList>) -> UnsafePointer<MIDIPacket>
-```
-Implemeted in c:
-```c
-// get pointer to const field from a pointer to a const struct, not possible in swift
-const MIDIPacket *  _Nonnull MIDIPacketListGetPacket(const MIDIPacketList *  _Nonnull packetList) {
-    return packetList->packet;
+extension UnsafePointer where Pointee == MIDIPacketList {
+    var packets:PacketList {
+        return PacketList(self)
+    }
+    var packet:UnsafePointer<MIDIPacket> {
+        func pointer(_ p:UnsafePointer<MIDIPacket>)->UnsafePointer<MIDIPacket> {
+            return p
+        }
+        return pointer(&UnsafeMutablePointer<MIDIPacketList>(mutating:self).pointee.packet)
+    }
 }
 ```
-2. MIDIPacketGetNextPacket
 ```swift
-public func MIDIPacketGetNextPacket(_ packet: UnsafePointer<MIDIPacket>) -> UnsafePointer<MIDIPacket>
-```
-Implemeted in c:
-```c
-// the only diference to MIDIPacketNext is the const specifier of the result
-const MIDIPacket * _Nonnull MIDIPacketGetNextPacket(const MIDIPacket * _Nonnull packet) {
-    return MIDIPacketNext(packet);
+extension UnsafePointer where Pointee == MIDIPacket {
+
+    var data:UnsafeBufferPointer<UInt8> {
+        return UnsafeBufferPointer<UInt8>(start: &UnsafeMutablePointer<MIDIPacket>(mutating:self).pointee.data.0, count:Int(self.pointee.length))
+    }
+    func nextPacket() -> UnsafePointer<MIDIPacket> {
+        return UnsafePointer<MIDIPacket>(MIDIPacketNext(self))
+    }
 }
 ```
-Now iterating over pointet packets in swift it can be done like this:
 
 ```swift
 func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
 
-     var packet = MIDIPacketListGetPacket(packetList)
+     var packet = packetList.packet
 
     for i in 0..<packetList.pointee.numPackets {
 
         // use packet as UnsafePointer<MIDIPacket>
 
         // copies pointer to const MIDIPacket
-        packet =  MIDIPacketGetNextPacket(packet)
+        packet =  packet.nextPacket()
     }
 }
 ```

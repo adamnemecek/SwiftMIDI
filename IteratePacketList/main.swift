@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreMIDI
 
 // demonstrates iterating over packets in packet list in two different ways
 // 1. by copying a the next packet to a MIDIPacket struct -> this will procuce junk data!
@@ -31,8 +32,7 @@ func sysexString<S>(bytes:S) -> String where S :Sequence, S.Element == UInt8 {
 func printPacket(packet: UnsafePointer<MIDIPacket>, index:UInt32){
     print("packet \(index + 1) with timeStamp: \(packet.pointee.timeStamp), length: \(packet.pointee.length):\n")
     
-    let bytes = UnsafeBufferPointer<UInt8>(start:MIDIPacketGetData(packet), count:Int(packet.pointee.length))
-    print("\(sysexString(bytes: bytes))\n")
+    print("\(sysexString(bytes: packet.data))\n")
 }
 
 
@@ -57,13 +57,11 @@ func iterateOverCopiedPackets(packetList:UnsafePointer<MIDIPacketList>){
 
 func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
     
-    var packet = MIDIPacketListGetPacket(packetList)
+    var packet = packetList.packet
     for i in 0..<packetList.pointee.numPackets {
         
         printPacket(packet: packet, index:i)
-        
-        // copies pointer to const MIDIPacket
-        packet =  MIDIPacketGetNextPacket(packet)
+        packet =  packet.nextPacket()
     }
 }
 

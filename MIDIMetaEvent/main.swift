@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jan Ratschko. All rights reserved.
 //
 import Foundation
-
+import AudioToolbox
 // demonstates writing and reading of meta events in swift
 
 // set up a test sequence for our meta event

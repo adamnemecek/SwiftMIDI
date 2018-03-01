@@ -10,9 +10,7 @@ import AudioToolbox
 
 extension UnsafePointer where Pointee == MusicEventUserData {
     var data:UnsafeBufferPointer<UInt8> {
-        // access pointer to const UInt8 form const packet pointer
-        // this is done with a c-function, MusicEventUserDataGetData, not possible in swift
-        return UnsafeBufferPointer<UInt8>(start:MusicEventUserDataGetData(self), count:Int(self.pointee.length))
+        return UnsafeBufferPointer<UInt8>(start: &UnsafeMutablePointer<MusicEventUserData>(mutating:self).pointee.data, count:Int(self.pointee.length))
     }
 }
 

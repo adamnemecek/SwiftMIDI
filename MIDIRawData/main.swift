@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AudioToolbox
 
 // demonstates writing and reading of sysex data to music sequences
 
