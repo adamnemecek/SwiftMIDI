@@ -37,12 +37,12 @@ struct MutablePacketList {
         }
     }
     
+    // MIDIPacketListAdd may return nil but is not imported as an optional pointer
     func PacketListAdd(packetList: UnsafeMutablePointer<MIDIPacketList>, size: Int, currentPacket: UnsafeMutablePointer<MIDIPacket>?, timeStamp: MIDITimeStamp, dataSize: Int, data: UnsafePointer<UInt8>) -> UnsafeMutablePointer<MIDIPacket>? {
         
         guard let currentPacket = currentPacket else {
             return nil
         }
-        // MIDIPacketListAdd may return nil but is not imported as an optional pointer
         return MIDIPacketListAdd(packetList, size, currentPacket, timeStamp, dataSize, data)
     }
     

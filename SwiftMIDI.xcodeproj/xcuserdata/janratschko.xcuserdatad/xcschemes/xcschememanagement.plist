@@ -12,7 +12,7 @@
 		<key>MIDIMetaEvent.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>MIDIPacketList.xcscheme</key>
 		<dict>
@@ -27,7 +27,7 @@
 		<key>MusicEventUserData.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
 		</dict>
 		<key>SwiftMIDITests.xcscheme</key>
 		<dict>
