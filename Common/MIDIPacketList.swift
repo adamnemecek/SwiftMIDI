@@ -10,12 +10,15 @@ import Foundation
 import CoreMIDI
 
 struct PacketList : Sequence {
-    let packetList:UnsafePointer<MIDIPacketList>
+    
+     typealias Element = UnsafePointer<MIDIPacket>
+    
+    private let packetList:UnsafePointer<MIDIPacketList>
+    
     init(_ packetList:UnsafePointer<MIDIPacketList>){
         self.packetList = packetList
     }
-    typealias Element = UnsafePointer<MIDIPacket>
-    
+       
     func makeIterator() -> AnyIterator<UnsafePointer<MIDIPacket>> {
         
         var p = packetList.packet
