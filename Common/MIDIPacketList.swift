@@ -11,7 +11,7 @@ import CoreMIDI
 
 struct PacketList : Sequence {
     
-     typealias Element = UnsafePointer<MIDIPacket>
+    typealias Element = UnsafePointer<MIDIPacket>
     
     private let packetList:UnsafePointer<MIDIPacketList>
     
