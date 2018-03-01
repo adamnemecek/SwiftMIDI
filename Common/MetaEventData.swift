@@ -19,7 +19,6 @@ extension HeadedBytes where HeaderType == MIDIMetaEvent {
         self.init(numTrailingBytes: data.count) { metaEvent in
             metaEvent.pointee.metaEventType = type
             metaEvent.pointee.dataLength = UInt32(data.count)
-            
             _ = data.withUnsafeBytes { bytes in
                 memcpy(&metaEvent.pointee.data, bytes, data.count)
             }
