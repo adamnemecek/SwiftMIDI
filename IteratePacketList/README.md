@@ -86,3 +86,50 @@ func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
     }
 }
 ```
+Or with custom Sequence Extension:
+
+```swift
+struct PacketList : Sequence {
+
+    typealias Element = UnsafePointer<MIDIPacket>
+    
+    private let packetList:UnsafePointer<MIDIPacketList>
+    
+    init(_ packetList:UnsafePointer<MIDIPacketList>){
+            self.packetList = packetList
+    }
+    
+
+    func makeIterator() -> AnyIterator<UnsafePointer<MIDIPacket>> {
+
+            var p = packetList.packet
+
+            var i = (0..<packetList.pointee.numPackets).makeIterator()
+
+            return AnyIterator {
+        
+            defer {
+                p = p.nextPacket()
+            }
+            return i.next().map { _ in p }
+        }
+    }
+}
+```
+```swift
+extension UnsafePointer where Pointee == MIDIPacketList {
+    var packets:PacketList {
+        return PacketList(self)
+    }
+}
+```
+```swift
+func iterateOverPointedPackets(packetList:UnsafePointer<MIDIPacketList>){
+
+    for packet in 0..<packetList.packest {
+
+        // use packet as UnsafePointer<MIDIPacket>
+
+    }
+}
+```
