@@ -10,7 +10,7 @@ import AudioToolbox
 
 extension UnsafePointer where Pointee == MusicEventUserData {
     var data:UnsafeBufferPointer<UInt8> {
-        return UnsafeBufferPointer<UInt8>(start: &UnsafeMutablePointer<MusicEventUserData>(mutating:self).pointee.data, count:Int(self.pointee.length))
+        return .init(start: &self.mutable.pointee.data, count:Int(self.pointee.length))
     }
 }
 

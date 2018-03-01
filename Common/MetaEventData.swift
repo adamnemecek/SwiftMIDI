@@ -10,7 +10,7 @@ import AudioToolbox
 
 extension UnsafePointer where Pointee == MIDIMetaEvent {
     var data:UnsafeBufferPointer<UInt8> {
-        return UnsafeBufferPointer<UInt8>(start: &UnsafeMutablePointer<MIDIMetaEvent>(mutating:self).pointee.data, count:Int(self.pointee.dataLength))
+        return .init(start: &self.mutable.pointee.data, count:Int(self.pointee.dataLength))
     }
 }
 

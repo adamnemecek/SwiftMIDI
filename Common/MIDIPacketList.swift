@@ -36,10 +36,7 @@ extension UnsafePointer where Pointee == MIDIPacketList {
         return PacketList(self)
     }
     var packet:UnsafePointer<MIDIPacket> {
-        func pointer(_ p:UnsafePointer<MIDIPacket>)->UnsafePointer<MIDIPacket> {
-            return p
-        }
-        return pointer(&UnsafeMutablePointer<MIDIPacketList>(mutating:self).pointee.packet)
+        return .init(fromMutable:&self.mutable.pointee.packet)
     }
 }
 

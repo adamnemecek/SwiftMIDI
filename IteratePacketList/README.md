@@ -43,17 +43,20 @@ void iterateOverPointedPackets(const MIDIPacketList *packetList) {
 }
 ```
 Iterating over pointet packets in swift it can be done like this:
-
+```swift
+extension UnsafePointer {
+    var mutable:UnsafeMutablePointer<Pointee> {
+        return .init(mutating: self)
+        }
+    init(fromMutable:UnsafeMutablePointer<Pointee>) {
+        self.init(fromMutable)
+    }
+}
+```
 ```swift
 extension UnsafePointer where Pointee == MIDIPacketList {
-    var packets:PacketList {
-        return PacketList(self)
-    }
     var packet:UnsafePointer<MIDIPacket> {
-        func pointer(_ p:UnsafePointer<MIDIPacket>)->UnsafePointer<MIDIPacket> {
-            return p
-        }
-        return pointer(&UnsafeMutablePointer<MIDIPacketList>(mutating:self).pointee.packet)
+        return .init(fromMutable:&self.mutable.pointee.packet)
     }
 }
 ```
@@ -61,10 +64,10 @@ extension UnsafePointer where Pointee == MIDIPacketList {
 extension UnsafePointer where Pointee == MIDIPacket {
 
     var data:UnsafeBufferPointer<UInt8> {
-        return UnsafeBufferPointer<UInt8>(start: &UnsafeMutablePointer<MIDIPacket>(mutating:self).pointee.data.0, count:Int(self.pointee.length))
+        return .init(start: &self.mutable.pointee.data.0, count:Int(self.pointee.length))
     }
     func nextPacket() -> UnsafePointer<MIDIPacket> {
-        return UnsafePointer<MIDIPacket>(MIDIPacketNext(self))
+        return .init(MIDIPacketNext(self))
     }
 }
 ```

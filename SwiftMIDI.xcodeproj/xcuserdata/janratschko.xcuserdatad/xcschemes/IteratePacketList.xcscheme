@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7928305520468A07008E3EE0"
-               BuildableName = "IterateOverCopiedPackets"
-               BlueprintName = "IterateOverCopiedPackets"
+               BuildableName = "IteratePacketList"
+               BlueprintName = "IteratePacketList"
                ReferencedContainer = "container:SwiftMIDI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7928305520468A07008E3EE0"
-            BuildableName = "IterateOverCopiedPackets"
-            BlueprintName = "IterateOverCopiedPackets"
+            BuildableName = "IteratePacketList"
+            BlueprintName = "IteratePacketList"
             ReferencedContainer = "container:SwiftMIDI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -58,8 +58,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7928305520468A07008E3EE0"
-            BuildableName = "IterateOverCopiedPackets"
-            BlueprintName = "IterateOverCopiedPackets"
+            BuildableName = "IteratePacketList"
+            BlueprintName = "IteratePacketList"
             ReferencedContainer = "container:SwiftMIDI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7928305520468A07008E3EE0"
-            BuildableName = "IterateOverCopiedPackets"
-            BlueprintName = "IterateOverCopiedPackets"
+            BuildableName = "IteratePacketList"
+            BlueprintName = "IteratePacketList"
             ReferencedContainer = "container:SwiftMIDI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

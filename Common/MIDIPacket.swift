@@ -11,9 +11,9 @@ import CoreMIDI
 extension UnsafePointer where Pointee == MIDIPacket {
     
     var data:UnsafeBufferPointer<UInt8> {
-        return UnsafeBufferPointer<UInt8>(start: &UnsafeMutablePointer<MIDIPacket>(mutating:self).pointee.data.0, count:Int(self.pointee.length))
+        return .init(start: &self.mutable.pointee.data.0, count:Int(self.pointee.length))
     }
     func nextPacket() -> UnsafePointer<MIDIPacket> {
-        return UnsafePointer<MIDIPacket>(MIDIPacketNext(self))
+        return .init(MIDIPacketNext(self))
     }
 }
